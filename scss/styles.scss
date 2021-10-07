@@ -1,0 +1,103 @@
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$slightly-transparent-white-p: hsla(0, 0%, 100%, 0.75);
+$slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6);
+
+body {
+    background-color: $very-dark-blue;
+    color: $white;
+    font-family: 'Inter', sans-serif;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin: 0;
+}
+
+.card {
+    background-color: $dark-desaturated-blue;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template: "image"
+                   "body"
+                   "body"
+                   "body";
+    max-width: 540px;
+    &__image {
+        width: 100%;
+        grid-area: image;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $soft-violet;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    &__body {
+        grid-area: body;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 35px;
+    }
+    &__title {
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 32px;
+        padding-bottom: 19px;
+        font-size: 26px;
+    }
+    &__title_highlight {
+        color: $soft-violet;
+    }
+    &__text {
+        text-align: center;
+        color: $slightly-transparent-white-p;
+        margin: 0;
+        padding: 0;
+        line-height: 24px;
+        padding-bottom: 43px;
+    }
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    &__value {
+        font-weight: 700;
+        line-height: 24px;
+        font-size: 22px;
+    }
+    &__name {
+        color: $slightly-transparent-white-stat;
+        text-transform: uppercase;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
