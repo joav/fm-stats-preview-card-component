@@ -34,8 +34,9 @@ Users should be able to:
 ### Built with
 
 - HTML
-- CSS
+- SACSS
 - Flexbox
+- Grid
 - Mobile-first workflow
 - BEM (First steps)
 
