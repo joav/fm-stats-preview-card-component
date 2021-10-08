@@ -34,7 +34,7 @@ Users should be able to:
 ### Built with
 
 - HTML
-- SACSS
+- SASS
 - Flexbox
 - Grid
 - Mobile-first workflow
