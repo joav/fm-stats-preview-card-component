@@ -9,6 +9,12 @@ body {
   font-size: 15px;
   margin: 0;
 }
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    padding: 0;
+  }
+}
 
 .card {
   background-color: #1b1938;
@@ -16,7 +22,7 @@ body {
   overflow: hidden;
   display: grid;
   grid-template: "image" "body" "body" "body";
-  max-width: 540px;
+  max-width: 1110px;
 }
 .card__image {
   width: 100%;
@@ -67,6 +73,29 @@ body {
   line-height: 24px;
   padding-bottom: 43px;
 }
+@media only screen and (min-width: 768px) {
+  .card {
+    grid-template: "body image" "body image" "body image" "body image";
+    grid-template-columns: 1fr 1fr;
+  }
+  .card__title, .card__text {
+    text-align: left;
+  }
+  .card__body {
+    box-sizing: border-box;
+    padding: 74px;
+    padding-bottom: 64px;
+    align-items: flex-start;
+  }
+  .card__title {
+    line-height: 42px;
+    font-size: 36px;
+  }
+  .card__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
 
 .stats {
   display: flex;
@@ -90,6 +119,21 @@ body {
   font-family: "Lexend Deca", sans-serif;
   font-size: 12px;
   line-height: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .stats {
+    flex-direction: row;
+    gap: 62px;
+  }
+  .stats__item {
+    align-items: flex-start;
+  }
+  .stats__value {
+    font-size: 25px;
+  }
+  .stats__name {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
